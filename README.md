@@ -1,7 +1,7 @@
 # unocss-attributify-rust (experimental)
 
 Attributify Mode for [UnoCSS](https://github.com/unocss/unocss), 
-modified for Rust and the `rsx!` macro. Currently, only [`dioxus`](https://dioxuslabs.com)'s `rsx!` macro has been tested with this package. **This package should be considered experimental.**
+modified for Rust and the `rsx!` macro. Currently, only [`dioxus`](https://dioxuslabs.com)'s `rsx!` macro has been tested with this package. **This package should be considered experimental. Please report any issues to this repository, not the UnoCSS repository.**
 
 ## Installation
 
@@ -10,7 +10,7 @@ git submodule add https://github.com/campbellcole/unocss-attributify-rust
 ```
 
 ```ts
-import presetAttributify from './unocss-attributify-rust'
+import presetAttributify from './unocss-attributify-rust/src/index'
 
 Unocss({
   presets: [

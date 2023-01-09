@@ -35,9 +35,6 @@ export const extractorAttributify = (options?: AttributifyOptions): Extractor =>
       // detects rust code by finding `use` statements
       const isRust = rsxParsing || (detectRust && Array.from(code.matchAll(rustUseStatementRE)).length > 0);
       if (isRust) {
-        if (!rsxParsing) {
-          console.log("detected Rust source code file, using rsx parsing");
-        }
         // first match finds all instances of an `rsx!` invocation
         const result = Array.from(code.matchAll(rsxRE))
         // second match extracts the section of the macro invocation which contains element attributes
@@ -48,7 +45,6 @@ export const extractorAttributify = (options?: AttributifyOptions): Extractor =>
         // `cond1` and `cond2` will contain the values in the condition
         .flatMap(match => Array.from((match[1] || '').matchAll(rsxAttributeValueCondRE)))
         .flatMap(([, name, value, cond1, cond2]) => {
-          console.log([name, value, cond1, cond2]);
           if (ignoreAttributes.includes(name)) {
             return []
           }

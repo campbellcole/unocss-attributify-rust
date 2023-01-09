@@ -1,0 +1,50 @@
+{
+  "name": "unocss-attributify-rust",
+  "version": "0.48.3",
+  "description": "Attributify preset for UnoCSS (ported for Rust and rsx [experimental])",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "contributors": [
+    "Campbell Cole <cmcoleco@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/campbellcole/unocss-attributify-rust#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/campbellcole/unocss-attributify-rust.git"
+  },
+  "bugs": {
+    "url": "https://github.com/campbellcole/unocss-attributify-rust/issues"
+  },
+  "keywords": [
+    "unocss",
+    "unocss-preset",
+    "rust",
+    "rsx"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "dependencies": {
+    "@unocss/core": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "unbuild": "^1.0.2",
+    "vite": "^4.0.4"
+  }
+}

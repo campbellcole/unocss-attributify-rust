@@ -6,7 +6,10 @@ modified for Rust and the `rsx!` macro. Currently, only [`dioxus`](https://dioxu
 ## Installation
 
 ```bash
+# if your project has a git repository
 git submodule add https://github.com/campbellcole/unocss-attributify-rust
+# else
+git clone https://github.com/campbellcole/unocss-attributify-rust
 ```
 
 ```ts
